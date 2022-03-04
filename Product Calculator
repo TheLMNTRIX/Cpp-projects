@@ -12,6 +12,7 @@ int main()
 	cin >> b;
 	int c = a * b;
 	cout << "The product is:" << c;
+	return 0;
 
 
 	
