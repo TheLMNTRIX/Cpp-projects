@@ -1,0 +1,49 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class Time
+{
+private:
+	int second;                //To store the end value after converting to seconds
+	int hh, mm, ss;             //To store hour, minutes and seconds value
+public:
+	void input();           // to get user input
+	void consec();          //to convert time to seconds
+	void output();          //for output
+};
+
+void Time::input()
+{
+	cout << "Enter time:" << endl;
+	cout << "Hours?   ";          
+	cin >> hh;
+	cout << "Minutes? ";          
+	cin >> mm;
+	cout << "Seconds? ";          
+	cin >> ss;
+}
+
+void Time::consec()
+{
+	second = hh * 3600 + mm * 60 + ss;
+}
+
+void Time::output()
+{
+	cout << "The time is = " << hh << ":" << mm << ":" << ss << endl;
+	cout << "The time in total seconds = " << second;
+
+}
+
+int main()
+{
+	Time obj; //Creating object
+
+	obj.input();
+	obj.consec();
+	obj.output();
+
+	return 0;
+}
+
